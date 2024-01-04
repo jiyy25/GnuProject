@@ -122,7 +122,7 @@ class="
     <?php if(defined('_INDEX_')) echo 'mainpage'; else echo 'subpage'; ?>
 "
 >
-<div class="container"></div>
+
 
 <?php
 if ($is_member) { // 회원이라면 로그인 중이라는 메세지를 출력해준다.

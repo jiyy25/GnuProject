@@ -1,69 +1,26 @@
 
-<!-------------------------- 네비게이션 -------------------------->
-<div class="container-fluid top-line fixed-header">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div id="tnb_index_left">
-					<!-- social -->
-					<div class="sns_icon">
-					<a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-					</div>
-					<div class="sns_icon">
-					<a href="#"><i class="fab fa-twitter"></i></a>
-					</div>
-					<div class="sns_icon">
-					<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-					</div>
-				</div>
-				<div id="tnb_index">
-					<ul>
-					<?php if($is_member) { ?>
-						<li><a href="<?php echo G5_BBS_URL; ?>/logout.php">로그아웃</a></li>
-						<li><a href="<?php echo G5_BBS_URL; ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php">정보수정</a></li>
-					<?php }else{ ?>
-						<li><a href="<?php echo G5_BBS_URL; ?>/register.php"><i class="fa fa-user-plus" aria-hidden="true"></i> 회원가입</a></li>
-						<li><a href="<?php echo G5_BBS_URL; ?>/login.php"><i class="fas fa-sign-in-alt"></i> 로그인</a></li>
-					<?php }?>
-						<li><a href="<?php echo G5_BBS_URL; ?>/faq.php"><i class="fa fa-question" aria-hidden="true"></i> <span>FAQ</span></a></li>
-						<li><a href="<?php echo G5_BBS_URL; ?>/qalist.php"><i class="fa fa-comments" aria-hidden="true"></i> <span>1:1문의</span></a></li>
-						<li><a href="<?php echo G5_BBS_URL; ?>/current_connect.php" class="visit"><i class="fa fa-users" aria-hidden="true"></i> <span>접속자</span><strong class="visit-num">
-						1</strong></a></li>
-						<li><a href="<?php echo G5_BBS_URL; ?>/new.php"><i class="fa fa-history" aria-hidden="true"></i> <span>새글</span></a></li>
-						<?php if($is_admin) { ?>
-						<li><a href="<?php echo G5_URL?>/adm">관리자</a></li>
-						<?php } ?>
-					</ul>
-				</div>
-			</div><!-- /col -->
-		</div><!-- /row -->
-	</div><!-- /container -->
-</div>
-<style>
-.collapse.in{
-    -webkit-transition-delay: 4s;
-    transition-delay: 5s;
-    visibility: visible;
-}
-</style>
-<nav class="navbar fixed-top navbar-expand-lg navbar-white bg-white fixed-top">
-  <div class="container">
-	<a class="navbar-brand" href="<?php echo G5_URL?>" class="logo"><img src="<?php echo G5_THEME_URL?>/img/logo.png"></a>
+<nav class="navbar fixed-top navbar-expand-lg jjy_nav_bg">
+  <div class="container position-relative justify-content-end justify-content-lg-center">
+	<h1 class="position-absolute jjy_h1"><a class="d-block" href="<?php echo G5_URL?>" class="logo"><img src="<?php echo G5_THEME_URL?>/img/logo.png" class="img-fluid"></a></h1>
 	<button class="navbar-toggler navbar-dark navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 	  <span class="navbar-toggler-icon"></span>
 	</button>
+
+
 	<div class="collapse navbar-collapse" id="navbarResponsive" data-hover="dropdown" data-animations="fadeIn fadeIn fadeInUp fadeInRight">
-	  <ul class="navbar-nav ml-auto">
+	  <ul class="navbar-nav d-flex w-100 justify-content-between">
 		<?php
 		$sql = " select *
 					from {$g5['menu_table']}
 					where me_use = '1'
 					  and length(me_code) = '2'
 					order by me_order, me_id ";
-		$result = sql_query($sql, false);
+		$result = sql_query($sql, false); //대메뉴들
+
 		$gnb_zindex = 999; // gnb_1dli z-index 값 설정용
 		$menu_datas = array();
 		for ($i=0; $row=sql_fetch_array($result); $i++) {
+			
 			$menu_datas[$i] = $row;
 
 			$sql2 = " select *
@@ -72,17 +29,22 @@
 						  and length(me_code) = '4'
 						  and substring(me_code, 1, 2) = '{$row['me_code']}'
 						order by me_order, me_id ";
-			$result2 = sql_query($sql2);
+			$result2 = sql_query($sql2); //해당 대메뉴의 소메뉴들
+
 			for ($k=0; $row2=sql_fetch_array($result2); $k++) {
 				$menu_datas[$i]['sub'][$k] = $row2;
 			}
 		}
+		
+		$targetmenuli = floor( count($menu_datas) / 2 ) ; 
+	
+
 		$i = 0;
 		foreach( $menu_datas as $row ){
 			if( empty($row) ) continue; 
 		?>			
 			<?php if($row['sub']['0']) { ?>
-				<li class="nav-item dropdown megamenu-li">
+				<li class="nav-item dropdown megamenu-li  <?php if($i == ( $targetmenuli - 1 )) echo ' mr-lg-auto'; ?>">
 					<a class="nav-link dropdown-toggle ks4 f16" href="<?php echo $row['me_link']; ?>" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" target="_<?php echo $row['me_target']; ?>">
 					<?php echo $row['me_name'] ?>
 					</a>

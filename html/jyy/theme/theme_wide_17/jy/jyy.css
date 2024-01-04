@@ -1,4 +1,13 @@
-.mainpage .container {
-  width: auto !important;
-  max-width: none !important;
+.jjy_nav_bg {
+  background-color: #143E7F !important;
+}
+.jjy_nav_bg a {
+  color: white;
+}
+
+nav .jjy_h1 {
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 0;
+  z-index: 10000;
 }
