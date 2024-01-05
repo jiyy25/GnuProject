@@ -1,14 +1,18 @@
 
 <nav class="navbar fixed-top navbar-expand-lg jjy_nav_bg">
   <div class="container position-relative justify-content-end justify-content-lg-center">
-	<h1 class="position-absolute jjy_h1"><a class="d-block" href="<?php echo G5_URL?>" class="logo"><img src="<?php echo G5_THEME_URL?>/img/logo.png" class="img-fluid"></a></h1>
+
+	<h1 class="position-absolute jjy_h1">
+		<?php echo latest("pic_logo","logo",1,100);?>
+	</h1>
+
 	<button class="navbar-toggler navbar-dark navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 	  <span class="navbar-toggler-icon"></span>
 	</button>
 
 
 	<div class="collapse navbar-collapse" id="navbarResponsive" data-hover="dropdown" data-animations="fadeIn fadeIn fadeInUp fadeInRight">
-	  <ul class="navbar-nav d-flex w-100 justify-content-between">
+	  <ul class="navbar-nav d-flex w-100 justify-content-between ">
 		<?php
 		$sql = " select *
 					from {$g5['menu_table']}
@@ -44,12 +48,12 @@
 			if( empty($row) ) continue; 
 		?>			
 			<?php if($row['sub']['0']) { ?>
-				<li class="nav-item dropdown megamenu-li  <?php if($i == ( $targetmenuli - 1 )) echo ' mr-lg-auto'; ?>">
+				<li class="nav-item dropdown megamenu-li <?php if($i == ( $targetmenuli - 1 )) echo ' mr-lg-auto'; ?>">
 					<a class="nav-link dropdown-toggle ks4 f16" href="<?php echo $row['me_link']; ?>" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" target="_<?php echo $row['me_target']; ?>">
 					<?php echo $row['me_name'] ?>
 					</a>
 						<!-- 서브 -->
-						<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+						<ul class="dropdown-menu dropdown-menu-right jjy_ul_dropd" aria-labelledby="navbarDropdownPortfolio">
 							<?php
 							// 하위 분류
 							$k = 0;

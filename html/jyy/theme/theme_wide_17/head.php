@@ -22,6 +22,6 @@ if(defined('_INDEX_')) {
 
 <?php 
 	if($bo_table){
-		include_once(G5_THEME_PATH.'/top_banner.php');
+		include_once(G5_THEME_PATH.'/top_banner.php'); 
 	}
 ?>

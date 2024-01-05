@@ -1,8 +1,15 @@
+@font-face {
+  font-family: "NanumSquareNeo-Variable";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 .jjy_nav_bg {
   background-color: #143E7F !important;
 }
 .jjy_nav_bg a {
   color: white;
+  font-family: "NanumSquareNeo-Variable" !important;
 }
 
 nav .jjy_h1 {
@@ -10,4 +17,21 @@ nav .jjy_h1 {
   transform: translate(-50%, 0);
   top: 0;
   z-index: 10000;
+  bottom: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+nav .jjy_h1 img {
+  width: 18vw;
+  display: block;
+}
+nav .nav-link:after {
+  display: none !important;
+}
+nav .jjy_ul_dropd a {
+  color: black;
+}
+nav .jjy_ul_dropd a:hover {
+  color: #143E7F;
 }

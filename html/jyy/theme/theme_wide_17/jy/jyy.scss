@@ -1,26 +1,53 @@
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .jjy_nav_bg {
 
     background-color: #143E7F !important;
 
     a {
-        color: white
+        color: white;
+        font-family: 'NanumSquareNeo-Variable' !important;
     }
 
 }
 
 nav {
 
-
     .jjy_h1 {
         left: 50%;
         transform: translate(-50%, 0);
         top: 0;
         z-index: 10000;
+        bottom: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 18vw;
+            display: block;
+        }
+
     }
 
-    .center
+    .nav-link:after {
+        display: none !important;
+    }
 
+    .jjy_ul_dropd {
 
+        a {
+            color: black;
 
+            &:hover {
+                color: #143E7F;
+            }
 
+        }
+    }
 }
