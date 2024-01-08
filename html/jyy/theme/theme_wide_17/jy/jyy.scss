@@ -5,14 +5,42 @@
     font-style: normal;
 }
 
+$maincolor : #143E7F;
+$blackcolor: #000;
+$whitecolor: #fff;
+$nanumfont: 'NanumSquareNeo-Variable';
+
+
 .jjy_nav_bg {
 
-    background-color: #143E7F !important;
+    background-color: transparent;
+    transition: 0.3s;
+
+    &.actbg {
+        background-color: $maincolor;
+
+        a {
+            color: $whitecolor;
+        }
+
+        .logo0 {
+            display: block;
+
+        }
+
+        .logo1 {
+            display: none;
+
+        }
+
+    }
 
     a {
-        color: white;
-        font-family: 'NanumSquareNeo-Variable' !important;
+        color: $blackcolor;
+        font-family: $nanumfont;
+
     }
+
 
 }
 
@@ -29,6 +57,13 @@ nav {
         align-items: center;
         margin-bottom: 0;
 
+        .logo0 {
+            display: none;
+
+        }
+
+
+
         img {
             width: 18vw;
             display: block;
@@ -40,16 +75,33 @@ nav {
         display: none !important;
     }
 
-
-
     .jjy_toggle {
         background-color: transparent !important;
     }
 
     .navbar-nav {
-        &:hover {
-            .jjy_ul_dropd {
 
+
+
+        @media (max-width:990px) {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 100%;
+            background-color: $maincolor;
+        }
+
+        .nav-item {
+            &:hover {
+                z-index: 10000;
+            }
+        }
+
+
+        &:hover {
+            // 네비전체
+
+            .jjy_ul_dropd {
 
                 @media (min-width:991px) {
                     & {
@@ -62,32 +114,70 @@ nav {
 
         }
 
-        .jjy_ul_dropd {
-            a {
-                color: black;
+        @media (min-width:991px) {
+            &:after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                height: 0;
+                overflow: hidden;
+                padding: 0;
+                border: 0;
+                transition: 0.5s;
+                background-color: rgba(255, 255, 255, 1);
+                border-top: 0;
+            }
 
-                &:hover {
-                    color: #143E7F;
+            &:hover:after {
+                border: 1px solid #ccc;
+                height: 170px;
+            }
+        }
+
+        .jjy_ul_dropd {
+            left: 0;
+
+            .jjy_dropli {
+                &:nth-child(1) {
+                    margin-top: 0.5rem;
                 }
 
+
+                padding: 0.5rem 0;
+                margin-left: 1.8rem;
+                margin-right: 1rem;
+
+                a {
+                    color: $blackcolor;
+                    background-color: transparent;
+                    margin-left: 0;
+                    margin-right: 3rem;
+                    padding-left: 0;
+
+                    &:hover {
+                        color: $maincolor;
+                    }
+
+                }
             }
 
             @media (min-width:991px) {
                 & {
-                    display: block;
+                    display: block !important;
                     height: 0;
                     overflow: hidden;
                     padding: 0;
                     border: 0;
                     transition: 0.5s;
+                    background-color: transparent !important;
                 }
             }
         }
     }
 
-    .jjy_ul2 {
-        // position: absolute;
-    }
+
 }
 
 

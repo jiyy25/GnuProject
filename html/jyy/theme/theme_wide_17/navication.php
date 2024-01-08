@@ -1,9 +1,11 @@
 
-<nav class="navbar fixed-top navbar-expand-lg jjy_nav_bg">
-  <div class="container position-relative justify-content-end justify-content-lg-center">
+<nav class="navbar fixed-top navbar-expand-lg jjy_nav_bg px-0 px-lg-2">
+  <div class="container  justify-content-end justify-content-lg-center">
 
-	<h1 class="position-absolute jjy_h1 my-lg-0">
-		<?php echo latest("pic_logo","logo",1,100);?>
+	<h1 class="position-absolute jjy_h1 my-lg-0 px-lg-5">
+		<span class="d-block mx-lg-5 px-lg-4">
+		  <?php echo latest("pic_logo","logo",2,100);?>
+		</span>
 	</h1>
 
 	<button class="navbar-toggler navbar-dark navbar-toggler-right jjy_toggle" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,7 +14,7 @@
 
 
 	<div class="collapse navbar-collapse" id="navbarResponsive" data-hover="dropdown" data-animations="fadeIn fadeIn fadeInUp fadeInRight">
-	  <ul class="navbar-nav d-flex w-100 justify-content-between jjy_ul2">
+	  <ul class="navbar-nav d-flex w-100 justify-content-between jjy_ul_hdmn">
 		<?php
 		$sql = " select *
 					from {$g5['menu_table']}
@@ -62,7 +64,7 @@
 							if( empty($row2) ) continue; 
 
 							?>
-							<a class="dropdown-item ks4 fw4" href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>"><?php echo $row2['me_name'] ?></a>
+							<li class="jjy_dropli"><a class="dropdown-item ks4 fw4" href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>"><?php echo $row2['me_name'] ?></a></li>
 
 							<?php
 							$k++;
@@ -71,6 +73,8 @@
 							if($k > 0)
 							echo '</ul>'.PHP_EOL;
 							?>
+
+							
 			<?php }else{?>
 				<li class="nav-item">
 				<a class="nav-link ks4 f16" href="<?php echo $row['me_link']; ?>" target="_<?php echo $row['me_target']; ?>"><?php echo $row['me_name'] ?></a>

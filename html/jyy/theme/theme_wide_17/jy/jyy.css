@@ -5,11 +5,24 @@
   font-style: normal;
 }
 .jjy_nav_bg {
-  background-color: #143E7F !important;
+  background-color: transparent;
+  transition: 0.3s;
+}
+.jjy_nav_bg.actbg {
+  background-color: #143E7F;
+}
+.jjy_nav_bg.actbg a {
+  color: #fff;
+}
+.jjy_nav_bg.actbg .logo0 {
+  display: block;
+}
+.jjy_nav_bg.actbg .logo1 {
+  display: none;
 }
 .jjy_nav_bg a {
-  color: white;
-  font-family: "NanumSquareNeo-Variable" !important;
+  color: #000;
+  font-family: "NanumSquareNeo-Variable";
 }
 
 nav .jjy_h1 {
@@ -22,6 +35,9 @@ nav .jjy_h1 {
   align-items: center;
   margin-bottom: 0;
 }
+nav .jjy_h1 .logo0 {
+  display: none;
+}
 nav .jjy_h1 img {
   width: 18vw;
   display: block;
@@ -32,27 +48,76 @@ nav .nav-link:after {
 nav .jjy_toggle {
   background-color: transparent !important;
 }
+@media (max-width: 990px) {
+  nav .navbar-nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background-color: #143E7F;
+  }
+}
+nav .navbar-nav .nav-item:hover {
+  z-index: 10000;
+}
 @media (min-width: 991px) {
   nav .navbar-nav:hover .jjy_ul_dropd {
     height: 180px;
   }
 }
-nav .navbar-nav .jjy_ul_dropd a {
-  color: black;
-}
-nav .navbar-nav .jjy_ul_dropd a:hover {
-  color: #143E7F;
-}
 @media (min-width: 991px) {
-  nav .navbar-nav .jjy_ul_dropd {
-    display: block;
+  nav .navbar-nav:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
     height: 0;
     overflow: hidden;
     padding: 0;
     border: 0;
     transition: 0.5s;
+    background-color: rgb(255, 255, 255);
+    border-top: 0;
+  }
+  nav .navbar-nav:hover:after {
+    border: 1px solid #ccc;
+    height: 170px;
   }
 }
+nav .navbar-nav .jjy_ul_dropd {
+  left: 0;
+}
+nav .navbar-nav .jjy_ul_dropd .jjy_dropli {
+  padding: 0.5rem 0;
+  margin-left: 1.8rem;
+  margin-right: 1rem;
+}
+nav .navbar-nav .jjy_ul_dropd .jjy_dropli:nth-child(1) {
+  margin-top: 0.5rem;
+}
+nav .navbar-nav .jjy_ul_dropd .jjy_dropli a {
+  color: #000;
+  background-color: transparent;
+  margin-left: 0;
+  margin-right: 3rem;
+  padding-left: 0;
+}
+nav .navbar-nav .jjy_ul_dropd .jjy_dropli a:hover {
+  color: #143E7F;
+}
+@media (min-width: 991px) {
+  nav .navbar-nav .jjy_ul_dropd {
+    display: block !important;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    border: 0;
+    transition: 0.5s;
+    background-color: transparent !important;
+  }
+}
+
 footer span {
   font-size: 20px;
   margin: 30px 0;
