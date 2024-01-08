@@ -2,17 +2,17 @@
 <nav class="navbar fixed-top navbar-expand-lg jjy_nav_bg">
   <div class="container position-relative justify-content-end justify-content-lg-center">
 
-	<h1 class="position-absolute jjy_h1">
+	<h1 class="position-absolute jjy_h1 my-lg-0">
 		<?php echo latest("pic_logo","logo",1,100);?>
 	</h1>
 
-	<button class="navbar-toggler navbar-dark navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+	<button class="navbar-toggler navbar-dark navbar-toggler-right jjy_toggle" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 	  <span class="navbar-toggler-icon"></span>
 	</button>
 
 
 	<div class="collapse navbar-collapse" id="navbarResponsive" data-hover="dropdown" data-animations="fadeIn fadeIn fadeInUp fadeInRight">
-	  <ul class="navbar-nav d-flex w-100 justify-content-between ">
+	  <ul class="navbar-nav d-flex w-100 justify-content-between jjy_ul2">
 		<?php
 		$sql = " select *
 					from {$g5['menu_table']}

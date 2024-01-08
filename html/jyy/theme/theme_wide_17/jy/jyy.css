@@ -18,9 +18,9 @@ nav .jjy_h1 {
   top: 0;
   z-index: 10000;
   bottom: 0;
-  margin: 0;
   display: flex;
   align-items: center;
+  margin-bottom: 0;
 }
 nav .jjy_h1 img {
   width: 18vw;
@@ -29,9 +29,35 @@ nav .jjy_h1 img {
 nav .nav-link:after {
   display: none !important;
 }
-nav .jjy_ul_dropd a {
+nav .jjy_toggle {
+  background-color: transparent !important;
+}
+@media (min-width: 991px) {
+  nav .navbar-nav:hover .jjy_ul_dropd {
+    height: 180px;
+  }
+}
+nav .navbar-nav .jjy_ul_dropd a {
   color: black;
 }
-nav .jjy_ul_dropd a:hover {
+nav .navbar-nav .jjy_ul_dropd a:hover {
   color: #143E7F;
+}
+@media (min-width: 991px) {
+  nav .navbar-nav .jjy_ul_dropd {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    border: 0;
+    transition: 0.5s;
+  }
+}
+footer span {
+  font-size: 20px;
+  margin: 30px 0;
+}
+footer p {
+  font-size: 15px;
+  line-height: 1.5;
 }
