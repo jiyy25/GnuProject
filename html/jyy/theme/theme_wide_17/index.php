@@ -17,24 +17,26 @@ include_once(G5_THEME_PATH.'/head.php');
 
 <!-------------------------- bo_table :  고객이 인정한 맛, 회사소개 -------------------------->
 
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="container margin-top-110 margin-bottom-110 jjy_company">
+	<div class="center-heading margin-top-40">
+		<h2>고객이 선택한 맛</h2>
+	</div>
+	<!-- LATEST : pic_basic_company -->
+	<div class="d-flex justify-content-between jjy_picBox">
+		<?php echo latest('company','company', 1, 24); ?>
+		<div class="contentBox ml-4">
+			<strong class="mx-4">커피를 사랑하는 마음으로</strong>
+			<p class="mx-4">고객에게 향긋하고 맛있는 커피를 대접하기 위해, 커피홀은 품질 좋은 원두만을 취급하여 커피를 로스팅하고 있습니다.</p>
+			<a href="http://jiyy25.dothome.co.kr/jyy/bbs/content.php?co_id=company" class="p-2 border">브랜드소개</a>
+		</div>
+	</div>
+</div>
 
 
 
 
 <!-------------------------- 제품안내 갤러리 -------------------------->
-<div class="container margin-top-60 margin-bottom-60">
+<div class="container margin-top-110 margin-bottom-110">
 	<div class="center-heading margin-top-40">
 		<h2 class="ks4">제품안내</h2>
 		<span class="center-line"></span>
