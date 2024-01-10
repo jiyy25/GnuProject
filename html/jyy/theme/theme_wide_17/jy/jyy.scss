@@ -198,9 +198,22 @@ nav {
 
     .jjy_picBox {
 
+        .company_li {
+            border: 0.5px solid #ccc;
+            border-radius: 30px;
+
+            .lt_img {
+                display: block;
+
+                img {
+                    border-radius: 30px;
+                    width: 100%;
+                }
+            }
+        }
+
         .contentBox {
-            width: 415px;
-            height: 450px;
+            width: 415px !important;
             background-color: #B3E8FB;
             border-radius: 30px;
             display: flex;
@@ -236,13 +249,12 @@ nav {
 
         @media (max-width:991px) {
             & {
-                flex-direction: column;
-
                 .contentBox {
-                    width: 100%;
+                    width: 100% !important;
                     height: 70%;
                     margin-left: 0 !important;
                     padding: 2rem;
+                    margin-top: 1rem;
                 }
             }
         }

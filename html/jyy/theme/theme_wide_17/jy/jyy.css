@@ -128,9 +128,19 @@ nav .navbar-nav .jjy_ul_dropd .jjy_dropli a:hover {
 .jjy_company h2 {
   font-family: "Cafe24Ssurround";
 }
+.jjy_company .jjy_picBox .company_li {
+  border: 0.5px solid #ccc;
+  border-radius: 30px;
+}
+.jjy_company .jjy_picBox .company_li .lt_img {
+  display: block;
+}
+.jjy_company .jjy_picBox .company_li .lt_img img {
+  border-radius: 30px;
+  width: 100%;
+}
 .jjy_company .jjy_picBox .contentBox {
-  width: 415px;
-  height: 450px;
+  width: 415px !important;
   background-color: #B3E8FB;
   border-radius: 30px;
   display: flex;
@@ -159,14 +169,12 @@ nav .navbar-nav .jjy_ul_dropd .jjy_dropli a:hover {
   background-color: #3D7ED7;
 }
 @media (max-width: 991px) {
-  .jjy_company .jjy_picBox {
-    flex-direction: column;
-  }
   .jjy_company .jjy_picBox .contentBox {
-    width: 100%;
+    width: 100% !important;
     height: 70%;
     margin-left: 0 !important;
     padding: 2rem;
+    margin-top: 1rem;
   }
 }
 
