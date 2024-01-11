@@ -117,7 +117,7 @@ if(!defined('G5_IS_ADMIN'))
 </head>
 <body
 class="
-    <?php echo $bo_table; ?>
+    <?php if( $bo_table ) echo  $bo_table." boardstyle"; ?> 
     <?php echo $co_id; ?>
     <?php if(defined('_INDEX_')) echo 'mainpage'; else echo 'subpage'; ?>
 "

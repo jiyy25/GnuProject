@@ -18,8 +18,7 @@ include_once(G5_THEME_PATH.'/head.php');
 <!-------------------------- bo_table :  고객이 인정한 맛, 회사소개 -------------------------->
 
 <div class="container margin-top-110 margin-bottom-110 jjy_company">
-	
-	<!-- LATEST : pic_basic_company -->	
+	<!-- LATEST : company -->	
 	<?php echo latest('company','company', 1, 24); ?>
 	
 </div>
@@ -28,15 +27,8 @@ include_once(G5_THEME_PATH.'/head.php');
 
 
 <!-------------------------- 제품안내 갤러리 -------------------------->
-<div class="container margin-top-110 margin-bottom-110 jjy_bestmenu">
-	<div class="center-heading margin-top-40">
-		<h2 class="ks4">제품안내</h2>
-		<span class="center-line"></span>
-		<p class="sub-text margin-bottom-80 ks5 f19">
-		해당 제품에 대한 소개내용 입니다.
-		</p>
-	</div>
-	<!-- LATEST : pic_basic_company -->
+<div class="container margin-top-110 margin-bottom-110 jjy_bestmenu jjy_best_menu">
+	<!-- LATEST : bestmenu -->
 	<?php echo latest('bestmenu', 'bestmenu', 9, 24); ?>
 </div>
 
@@ -44,6 +36,11 @@ include_once(G5_THEME_PATH.'/head.php');
 
 
 <!-------------------------- 영상 게시판 -------------------------->
+
+<div class="container margin-top-110 margin-bottom-110 jjy_bestmenu jjy_best_menu">
+	<!-- LATEST : mov -->
+	<?php echo latest('mov','movie',1,100)?>
+</div>
 
 
 

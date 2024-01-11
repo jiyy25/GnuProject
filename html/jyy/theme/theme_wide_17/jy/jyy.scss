@@ -13,11 +13,41 @@
 }
 
 $maincolor : #143E7F;
+$darkblue: #103266;
+$skyblue: #B3E8FB;
 $blackcolor: #000;
 $whitecolor: #fff;
 $nanumfont: 'NanumSquareNeo-Variable';
 $cafefont: 'Cafe24Ssurround';
 
+
+//서브페이지 게시판 공통css
+
+#bo_list,
+#bo_w,
+#bo_v,
+#bo_cate {
+
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px 0;
+
+}
+
+.btn_bo_user li {
+    width: auto;
+}
+
+.fa+.sound_only {
+    font-size: 0.9rem;
+    line-height: 2;
+    width: auto;
+    position: unset !important;
+    height: auto;
+}
+
+
+//네비게이션 
 
 .jjy_nav_bg {
 
@@ -189,6 +219,8 @@ nav {
 
 }
 
+
+
 //고객이 인정한 맛, 회사소개
 
 .jjy_company {
@@ -260,9 +292,74 @@ nav {
         }
     }
 
+}
 
+
+
+//베스트메뉴게시판
+
+.jjy_best_menu {
+    font-family: $nanumfont;
+
+    h2 {
+        font-family: $cafefont !important;
+    }
+
+    .bst_pic_lt {
+        h3 {
+            font-family: $nanumfont !important;
+        }
+
+        .bst_9menu {
+            height: 600px;
+            background-color: $maincolor;
+            border-radius: 20px;
+
+            a {
+                color: $whitecolor;
+
+                &:hover {
+                    color: $skyblue;
+                }
+            }
+
+            .bst_big {
+                .bst_lt_img {
+                    background-color: transparent;
+                    border-radius: 0;
+
+                    &:hover {
+                        background-color: transparent;
+                    }
+                }
+
+                text-align: center;
+
+            }
+
+            .bst_lt_img {
+                display: block;
+                background-color: $darkblue;
+                border-radius: 50%;
+                max-width: 177px;
+                margin: 20px 10px;
+                transition: 0.5s;
+
+                &:hover {
+                    background-color: $skyblue;
+                }
+            }
+
+        }
+    }
 
 }
+
+
+//영상게시판
+
+
+
 
 
 

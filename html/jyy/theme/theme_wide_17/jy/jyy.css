@@ -10,6 +10,27 @@
   font-weight: normal;
   font-style: normal;
 }
+#bo_list,
+#bo_w,
+#bo_v,
+#bo_cate {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.btn_bo_user li {
+  width: auto;
+}
+
+.fa + .sound_only {
+  font-size: 0.9rem;
+  line-height: 2;
+  width: auto;
+  position: unset !important;
+  height: auto;
+}
+
 .jjy_nav_bg {
   background-color: transparent;
   transition: 0.3s;
@@ -176,6 +197,48 @@ nav .navbar-nav .jjy_ul_dropd .jjy_dropli a:hover {
     padding: 2rem;
     margin-top: 1rem;
   }
+}
+
+.jjy_best_menu {
+  font-family: "NanumSquareNeo-Variable";
+}
+.jjy_best_menu h2 {
+  font-family: "Cafe24Ssurround" !important;
+}
+.jjy_best_menu .bst_pic_lt h3 {
+  font-family: "NanumSquareNeo-Variable" !important;
+}
+.jjy_best_menu .bst_pic_lt .bst_9menu {
+  height: 600px;
+  background-color: #143E7F;
+  border-radius: 20px;
+}
+.jjy_best_menu .bst_pic_lt .bst_9menu a {
+  color: #fff;
+}
+.jjy_best_menu .bst_pic_lt .bst_9menu a:hover {
+  color: #B3E8FB;
+}
+.jjy_best_menu .bst_pic_lt .bst_9menu .bst_big {
+  text-align: center;
+}
+.jjy_best_menu .bst_pic_lt .bst_9menu .bst_big .bst_lt_img {
+  background-color: transparent;
+  border-radius: 0;
+}
+.jjy_best_menu .bst_pic_lt .bst_9menu .bst_big .bst_lt_img:hover {
+  background-color: transparent;
+}
+.jjy_best_menu .bst_pic_lt .bst_9menu .bst_lt_img {
+  display: block;
+  background-color: #103266;
+  border-radius: 50%;
+  max-width: 177px;
+  margin: 20px 10px;
+  transition: 0.5s;
+}
+.jjy_best_menu .bst_pic_lt .bst_9menu .bst_lt_img:hover {
+  background-color: #B3E8FB;
 }
 
 footer {
