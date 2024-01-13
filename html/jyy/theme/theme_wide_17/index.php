@@ -37,11 +37,12 @@ include_once(G5_THEME_PATH.'/head.php');
 
 <!-------------------------- 영상 게시판 -------------------------->
 
-<div class="container margin-top-110 margin-bottom-110 jjy_bestmenu jjy_best_menu">
-	<!-- LATEST : mov -->
+<div class="margin-top-110 margin-bottom-110 jjy_bestmenu jjy_mv position-relative">
+	<!-- LATEST :  -->
+
 	<?php echo latest('mov','movie',1,100)?>
 </div>
-
+<!-- <div class="back_img"></div> -->
 
 
 
