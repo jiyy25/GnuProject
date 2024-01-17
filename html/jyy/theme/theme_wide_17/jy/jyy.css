@@ -234,7 +234,6 @@ nav .navbar-nav .jjy_ul_dropd .jjy_dropli a:hover {
   background-color: #103266;
   border-radius: 50%;
   max-width: 177px;
-  margin: 20px 10px;
   transition: 0.5s;
 }
 .jjy_best_menu .bst_pic_lt .bst_9menu .bst_lt_img:hover {
@@ -244,21 +243,10 @@ nav .navbar-nav .jjy_ul_dropd .jjy_dropli a:hover {
 .jjy_mv h2 {
   font-family: "Cafe24Ssurround";
 }
-.jjy_mv .mv_all {
-  height: 320px;
-  top: 26%;
-  left: 50%;
-  transform: translateX(-50%);
-}
 .jjy_mv .mv_all .mv_texbox {
   font-family: "NanumSquareNeo-Variable";
-  height: 100%;
-  width: 450px;
-  background-color: #B3E8FB;
+  background-color: rgba(179, 232, 251, 0.8431372549);
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .jjy_mv .mv_all .mv_texbox p {
   font-size: 25px;
@@ -274,7 +262,6 @@ nav .navbar-nav .jjy_ul_dropd .jjy_dropli a:hover {
   background-color: #143E7F !important;
   color: #fff;
   margin: 0 auto;
-  margin-top: 1.5rem;
   transition: 0.3s;
 }
 .jjy_mv .mv_all .mv_texbox .mv_btn:hover {
@@ -282,10 +269,33 @@ nav .navbar-nav .jjy_ul_dropd .jjy_dropli a:hover {
 }
 
 .back_img {
-  height: 450px;
-  background-image: url(./img/img_banner_1_1.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+.jjy_event .event_pic h2 {
+  font-family: "Cafe24Ssurround";
+}
+.jjy_event .event_pic .event_li {
+  border-radius: 10px !important;
+  font-family: "NanumSquareNeo-Variable";
+  background-color: ghostwhite;
+  max-width: 320px;
+  margin: 0 auto;
+}
+.jjy_event .event_pic .event_li a {
+  display: block;
+  font-weight: bold;
+}
+.jjy_event .event_pic .event_li a img {
+  width: 300px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.jjy_event .event_pic .event_li span {
+  color: #585858;
+  margin-top: 0.5rem;
+  display: block;
 }
 
 footer {

@@ -53,16 +53,9 @@ include_once(G5_THEME_PATH.'/head.php');
 
 
 <!-------------------------- 이벤트 게시판 -------------------------->
-<div class="padding-top-60">
+<div class="padding-top-60 jjy_event">
 	<div class="container">
-		<div class="row">
-			<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-				<?php echo latest('theme/basic_main_one', 'notice', 5, 40);?>
-			</div>
-			<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-				<?php echo latest('theme/basic_main_one', 'free', 5, 40);?>
-			</div>
-		</div>
+		<?php echo latest('event_block','eventtime', 3, 100);?>
 	</div>
 </div>
 

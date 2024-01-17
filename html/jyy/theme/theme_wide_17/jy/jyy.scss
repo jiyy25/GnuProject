@@ -342,7 +342,6 @@ nav {
                 background-color: $darkblue;
                 border-radius: 50%;
                 max-width: 177px;
-                margin: 20px 10px;
                 transition: 0.5s;
 
                 &:hover {
@@ -363,20 +362,11 @@ nav {
     }
 
     .mv_all {
-        height: 320px;
-        top: 26%;
-        left: 50%;
-        transform: translateX(-50%);
 
         .mv_texbox {
             font-family: $nanumfont;
-            height: 100%;
-            width: 450px;
-            background-color: $skyblue;
+            background-color: #b3e8fbd7;
             border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
 
             p {
                 font-size: 25px;
@@ -393,7 +383,6 @@ nav {
                 background-color: $maincolor !important;
                 color: $whitecolor;
                 margin: 0 auto;
-                margin-top: 1.5rem;
                 transition: 0.3s;
 
                 &:hover {
@@ -406,12 +395,47 @@ nav {
 }
 
 .back_img {
-    height: 450px;
-    background-image: url(./img/img_banner_1_1.jpg);
+
+    // background-image: url(./img/img_banner_1_1.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
+
+//이벤트 게시판
+.jjy_event {
+    .event_pic {
+        h2 {
+            font-family: $cafefont;
+        }
+
+        .event_li {
+            border-radius: 10px !important;
+            font-family: $nanumfont;
+            background-color: ghostwhite;
+            max-width: 320px;
+            margin: 0 auto;
+
+            a {
+                display: block;
+                font-weight: bold;
+
+                img {
+                    width: 300px;
+                    border-top-right-radius: 10px;
+                    border-top-left-radius: 10px;
+                }
+            }
+
+            span {
+                color: #585858;
+                margin-top: 0.5rem;
+                display: block;
+            }
+
+        }
+    }
+}
 
 
 //footer
