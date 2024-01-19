@@ -133,6 +133,7 @@ nav .navbar-nav .jjy_ul_dropd .jjy_dropli a {
 }
 nav .navbar-nav .jjy_ul_dropd .jjy_dropli a:hover {
   color: #143E7F;
+  font-size: 15px;
 }
 @media (min-width: 991px) {
   nav .navbar-nav .jjy_ul_dropd {
@@ -298,8 +299,62 @@ nav .navbar-nav .jjy_ul_dropd .jjy_dropli a:hover {
   display: block;
 }
 
+.jjy_storeform {
+  padding: 0.5rem 2rem;
+  background-color: #B3E8FB;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+.jjy_storeform.on {
+  position: relative;
+  bottom: auto;
+  left: auto;
+}
+.jjy_storeform.none {
+  display: none;
+}
+.jjy_storeform .store_title {
+  min-width: 113px;
+}
+.jjy_storeform .store_title strong {
+  display: block;
+  font-size: 25px;
+}
+.jjy_storeform .store_title span {
+  display: block;
+  font-size: 18px;
+}
+.jjy_storeform input {
+  height: 48px;
+  border-radius: 20px;
+  width: 250px;
+  padding: 1rem;
+}
+.jjy_storeform select {
+  width: 250px;
+  height: 48px;
+  border-radius: 20px;
+}
+.jjy_storeform button {
+  background-color: #143E7F;
+  color: #fff;
+  border-radius: 20px;
+  width: 250px;
+  height: 48px;
+  border: none;
+}
+.jjy_storeform button:hover {
+  background-color: #103266;
+}
+
 footer {
-  background-color: #143E7F !important;
+  background-color: #e8e9eb !important;
+}
+footer h1 {
+  font-size: 2rem;
 }
 footer h1 .logo0 {
   display: block !important;
@@ -308,14 +363,18 @@ footer h1 .logo0 img {
   width: 30vw;
   max-width: 230px;
 }
-footer span {
-  margin: 30px 0;
-}
 footer span a {
-  color: #fff !important;
-  font-size: 20px;
+  color: #000;
+  font-size: 16px;
+  display: inline-block;
+  margin: 0.5rem;
+  transition: 0.3s;
+}
+footer span a:hover {
+  color: #143E7F;
 }
 footer p {
-  font-size: 15px;
+  color: #585858;
+  font-size: 14px;
   line-height: 1.5;
 }

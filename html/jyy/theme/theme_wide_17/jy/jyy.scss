@@ -197,6 +197,7 @@ nav {
 
                     &:hover {
                         color: $maincolor;
+                        font-size: 15px;
                     }
 
                 }
@@ -438,11 +439,78 @@ nav {
 }
 
 
+//가맹문의 폼 존
+
+.jjy_storeform {
+    padding: 0.5rem 2rem;
+    background-color: $skyblue;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    // display: block;
+
+    &.on {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        
+    }
+
+    &.none{
+        display: none;
+    }
+
+    .store_title {
+
+        min-width: 113px;
+
+        strong {
+            display: block;
+            font-size: 25px;
+        }
+
+        span {
+            display: block;
+            font-size: 18px;
+        }
+    }
+
+    input {
+        height: 48px;
+        border-radius: 20px;
+        width: 250px;
+        padding: 1rem;
+    }
+
+    select {
+        width: 250px;
+        height: 48px;
+        border-radius: 20px;
+    }
+
+    button {
+        background-color: $maincolor;
+        color: $whitecolor;
+        border-radius: 20px;
+        width: 250px;
+        height: 48px;
+        border: none;
+
+        &:hover {
+            background-color: $darkblue;
+        }
+    }
+}
+
+
 //footer
 footer {
-    background-color: $maincolor !important;
+    background-color: #e8e9eb !important;
 
     h1 {
+        font-size: 2rem;
 
         .logo0 {
             display: block !important;
@@ -456,17 +524,24 @@ footer {
     }
 
     span {
-        a {
-            color: $whitecolor !important;
-            font-size: 20px;
-        }
 
-        margin: 30px 0;
+        a {
+            color: $blackcolor;
+            font-size: 16px;
+            display: inline-block;
+            margin: 0.5rem;
+            transition: 0.3s;
+
+            &:hover {
+                color: $maincolor;
+            }
+        }
 
     }
 
     p {
-        font-size: 15px;
+        color: #585858;
+        font-size: 14px;
         line-height: 1.5;
     }
 }

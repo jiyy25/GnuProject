@@ -8,9 +8,9 @@ $thumb_height = 470;
 $list_count = (is_array($list) && $list) ? count($list) : 0;
 ?>
 
-<div class="event_pic">
+<div class="event_pic margin-bottom-100">
     <h2 class="lat_title text-center mb-5"><?php echo $bo_subject ?></h2>
-    <ul class="d-md-flex justify-content-center justify-content-lg-between align-items-center">
+    <ul class="mt-5 d-md-flex justify-content-center justify-content-lg-between align-items-center">
     <?php
     for ($i=0; $i<$list_count; $i++) {
     $thumb = get_list_thumbnail($bo_table, $list[$i]['wr_id'], $thumb_width, $thumb_height, false, true);
@@ -25,7 +25,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
     ?>
     
-        <li class="event_li border text-center p-2 mb-3 mb-lg-0">
+        <li class="event_li border text-center p-2 mb-3 mb-lg-0 mt-3">
             <a href="<?php echo $wr_href; ?>" class="lt_img mb-1"><?php echo run_replace('thumb_image_tag', $img_content, $thumb); ?></a>
             <?php
 

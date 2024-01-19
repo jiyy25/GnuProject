@@ -1,8 +1,8 @@
-	<footer class="py-4 jjy_nav_bg" >
+	<footer class="py-2 jjy_nav_bg" >
 		<div class="container footer">
 			<div class="row">
 				<div class="col-md-12 text-white text-center">
-					<h1 class="text-center"><?php echo latest("pic_logo","logo",1,100);?></h1>
+					<h1 class="text-center"><?php echo latest("fd_logo","fd_logo",1,100);?></h1>
 					<span><a href="">문의하기</a></span>
 					<span><a href="">개인정보처리방침</a></span>
 					<span><a href="">이용약관</a></span>
