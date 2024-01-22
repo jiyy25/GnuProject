@@ -125,7 +125,7 @@ include_once(G5_THEME_PATH.'/head.php');
 			<strong class="text-center">가맹문의</strong>
 			<span class="text-center">1992-0825</span>
 		</div>
-		<form action="" class="jyy_form d-flex flex-column flex-lg-row m-1">
+		<form action="" class="jjy_form d-flex flex-column flex-lg-row m-1">
 			<div class="formbox d-flex flex-column flex-sm-row justify-content-between align-items-center">
 				<div class="form1 mr-sm-2 mb-1 mb-lg-0">
 					<input type="text" placeholder="이름" class="border">
@@ -143,7 +143,16 @@ include_once(G5_THEME_PATH.'/head.php');
 					<option value="">부산</option>
 				</select>
 				<button class="">문의하기</button>
+				
 			</div>
+			<div class ="text-center align-items-center d-flex flex-column flex-lg-row ">
+				<label for="agree">
+					개인정보 처리방침 동의
+					<input type="checkbox" id="agree" class="agree text-center">
+				</label>
+				
+			</div>
+			
 			
 		</form>
 	</div>

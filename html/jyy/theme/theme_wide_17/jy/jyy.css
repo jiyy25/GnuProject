@@ -330,24 +330,40 @@ nav .navbar-nav .jjy_ul_dropd .jjy_dropli a:hover {
 .jjy_storeform input {
   height: 48px;
   border-radius: 20px;
-  width: 250px;
+  width: 200px;
   padding: 1rem;
 }
 .jjy_storeform select {
-  width: 250px;
+  width: 200px;
   height: 48px;
   border-radius: 20px;
+}
+.jjy_storeform label {
+  margin: 0;
+}
+.jjy_storeform input.agree {
+  width: 15px;
+  text-align: center;
+  height: unset;
 }
 .jjy_storeform button {
   background-color: #143E7F;
   color: #fff;
   border-radius: 20px;
-  width: 250px;
+  width: 200px;
   height: 48px;
   border: none;
 }
 .jjy_storeform button:hover {
   background-color: #103266;
+}
+@media (max-width: 988px) {
+  .jjy_storeform .jjy_form {
+    display: none !important;
+  }
+  .jjy_storeform .jjy_form.click {
+    display: block !important;
+  }
 }
 
 footer {
@@ -377,4 +393,31 @@ footer p {
   color: #585858;
   font-size: 14px;
   line-height: 1.5;
+}
+
+#top_btn.jy_sTop {
+  z-index: 99999999 !important;
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  line-height: 46px;
+  border: 2px solid #333;
+  color: #333;
+  text-align: center;
+  font-size: 30px;
+  z-index: 90;
+  background: rgba(255, 255, 255, 0.5);
+  display: none;
+  transition: 0.3s;
+}
+#top_btn.jy_sTop:hover {
+  border: 1.5px solid #143E7F;
+  color: #143E7F;
+  background-color: #fff;
+}
+#top_btn.jy_sTop.act {
+  display: block;
 }

@@ -26,13 +26,13 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 
     
-    <button type="button" id="top_btn">
-    	<i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span>
+    <button type="button" id="top_btn" class="jy_sTop">
+    <span class="material-symbols-outlined">arrow_upward</span>
     </button>
     <script>
     $(function() {
         $("#top_btn").on("click", function() {
-            $("html, body").animate({scrollTop:0}, '500');
+            $("html, body").animate({scrollTop:0}, '600');
             return false;
         });
     });

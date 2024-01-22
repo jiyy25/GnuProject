@@ -27,22 +27,36 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     })
 
+    //폼태그 토글
+    document.querySelector('.jjy_storeform').addEventListener('click', function () {
+        document.querySelectorAll('.jjy_storeform .jjy_form').forEach(function (v, i) {
+            v.classList.toggle('click')
+        })
+    })
+
 })
 
+
+//폼태그
 $(document).ready(function () {
     var $w = $(window);
     var footerH = $('.jjy_nav_bg').outerHeight();
     var $banner = $('.jjy_storeform');
+    var $topBtn = $('.jy_sTop');
 
     $w.on('scroll', function () {
         var sT = $(window).scrollTop();
         var val = $(document).height() - $(window).height() - footerH
 
-        if (sT > val)
-            $banner.addClass('on')
-        else (
+        if (sT > val) {
+            $banner.addClass('on');
+            $topBtn.addClass('act');
+        }
+        else {
             $banner.removeClass('on')
-        )
+            $topBtn.removeClass('act');
+        }
 
     });
 })
+

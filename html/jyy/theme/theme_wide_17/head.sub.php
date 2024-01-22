@@ -96,13 +96,14 @@ if(!defined('G5_IS_ADMIN'))
 <link href="//fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800|Noto+Sans+KR:100,300,400,500,700,900|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
 
-
 <link rel="stylesheet" href="<?php echo G5_THEME_URL?>/assets/bootstrap/css/bootstrap.css" >
 
 <!-- bootstrap-social icon -->
 <link href="<?php echo G5_THEME_URL?>/assets/bootstrap-social/bootstrap-social.css" rel="stylesheet">
 <link href="<?php echo G5_THEME_URL?>/css/animate.css" rel="stylesheet">
 <link href="<?php echo G5_THEME_URL?>/css/bootstrap-dropdownhover.css" rel="stylesheet">
+<!-- google icon -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 <!-- plugin -->
 <link rel="stylesheet" href="<?php echo G5_THEME_URL?>/assets/swiper/swiper-bundle.min.css" >
