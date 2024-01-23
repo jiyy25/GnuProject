@@ -20,8 +20,48 @@ $whitecolor: #fff;
 $nanumfont: 'NanumSquareNeo-Variable';
 $cafefont: 'Cafe24Ssurround';
 
+@media (max-width:990px) {
+    .navbar {
 
 
+        .navbar-collapse {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 100%;
+
+            .navbar-nav {
+                overflow: hidden;
+                max-height: 0;
+                transition: 0.5s;
+
+            }
+        }
+
+        .navbar-collapse:not(.show) {
+
+
+            overflow: hidden;
+            height: 0;
+            display: block !important;
+
+        }
+
+        .navbar-collapse.show {
+            overflow: visible;
+
+            .navbar-nav {
+                overflow: hidden;
+                max-height: 380px;
+
+            }
+        }
+
+
+    }
+
+
+}
 
 
 
@@ -51,15 +91,20 @@ $cafefont: 'Cafe24Ssurround';
 }
 
 
-//네비게이션 
+//네비게이션
+
 
 .jjy_nav_bg {
+
+    .megamenu-li {
+        padding: 7px 5px;
+    }
 
     background-color: transparent;
     transition: 0.3s;
 
     &.actbg {
-        background-color: $maincolor;
+        background-color: $maincolor !important;
 
         a {
             color: $whitecolor;
@@ -74,6 +119,7 @@ $cafefont: 'Cafe24Ssurround';
             display: none;
 
         }
+
 
     }
 
@@ -122,36 +168,6 @@ nav {
         background-color: transparent !important;
     }
 
-
-    @media (max-width:990px) {
-        .navbar {
-
-
-            .navbar-collapse {
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: 100%;
-            }
-
-            .navbar-collapse:not(.show) {
-
-
-                overflow: hidden;
-                height: 0;
-                display: block !important;
-
-            }
-
-            .navbar-collapse.show {
-                overflow: visible;
-            }
-
-
-        }
-
-
-    }
 
 
     .navbar-nav {
@@ -213,15 +229,19 @@ nav {
 
         .jjy_ul_dropd {
             left: 0;
+            min-width: 90px !important;
+
 
             .jjy_dropli {
+                margin: 0 5px;
+
                 &:nth-child(1) {
                     margin-top: 0.5rem;
                 }
 
 
-                padding: 0.5rem 0;
-                margin-left: 1.8rem;
+                padding: 7px 5px;
+                // margin-left: 1.8rem;
                 margin-right: 1rem;
 
                 a {
@@ -505,12 +525,12 @@ nav {
 
         strong {
             display: block;
-            font-size: 25px;
+            font-size: 16px;
         }
 
         span {
             display: block;
-            font-size: 18px;
+            font-size: 20px;
         }
     }
 
@@ -529,12 +549,25 @@ nav {
 
     label {
         margin: 0;
+        padding: 3px;
+
+        p {
+            font-size: 14px;
+            min-width: 80px;
+            margin-bottom: 0 !important;
+            display: inline-block;
+        }
     }
 
-    input.agree {
-        width: 15px;
-        text-align: center;
-        height: unset;
+    .agreeBox {
+
+        input.agree {
+            max-width: 15px !important;
+            text-align: center;
+            height: 15px !important;
+
+
+        }
     }
 
     button {
@@ -550,7 +583,7 @@ nav {
         }
     }
 
-    @media (max-width: 988px) {
+    @media (max-width: 990px) {
         &.click {
 
             .jjy_form {
@@ -562,9 +595,40 @@ nav {
         .jjy_form {
             display: none !important;
 
+            input.agree {
+                width: 15px;
+                height: 15px;
+            }
         }
 
     }
+
+    @media (min-width:991px) {
+        .jjy_storeform{
+            min-height: 78px;
+        }
+
+        input {
+            min-width: 160px;
+        }
+
+        input.agree {
+            width: 15px;
+            height: 15px;
+
+        }
+
+        select {
+            min-width: 160px;
+        }
+
+        button {
+            min-width: 160px;
+        }
+
+
+    }
+
 }
 
 
@@ -637,5 +701,23 @@ footer {
         &.act {
             display: block;
         }
+    }
+}
+
+#jjy_nav.ham-on {
+    background-color: $maincolor !important;
+
+    a.dropdown-toggle {
+        color: $whitecolor;
+    }
+
+    .logo0 {
+        display: block;
+
+    }
+
+    .logo1 {
+        display: none;
+
     }
 }

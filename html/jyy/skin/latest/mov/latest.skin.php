@@ -28,51 +28,16 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     for ($i=0; $i<$list_count; $i++) {
     $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
     ?> 
-        <div class ="mv_texbox col-lg-5 w-auto py-5 d-flex flex-column justify-content-between mb-3 mb-lg-0 ">
+        <div class ="mv_texbox col-lg-4 w-auto py-5 d-flex flex-column justify-content-between mb-3 mb-lg-0 ">
             <a href="<?php echo $list[$i]['wr_link1']?>">
             <?php echo $list[$i]['wr_content']?>
             </a>
             <a class="mv_btn text-center" href="<?php echo $list[$i]['wr_link1']?>">창업문의</a>
         </div>
-        <div class="flex-grow-1 pl-lg-5">
+        <div class="col-lg-7">
             <div class="position-relative ml-lg-5 overflow-hidden" style="height:0; padding-top:56%; border-radius:10px; " >
-            <section class="youtube">
-            <div class="youtube__area">
-            <div id="player">
-
-            </div>
-            </div>
-            </section>
             <iframe class="position-absolute w-100 h-100" style="top:0; left:0;"   src="https://www.youtube.com/embed/<?php echo $list[$i]['wr_subject']; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
-            <script>
-    // 2. This code loads the IFrame Player API code asynchronously.
-    var tag = document.createElement('script');
-
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    // 3. This function creates an <iframe> (and YouTube player)
-    //    after the API code downloads.
-    function onYouTubeIframeAPIReady() { // 함수이름 바꾸면 인식안됨 !
-      // <div id="player"></div>
-      new YT.Player('player', {
-        // 유튜부영상 -> 임베드-> src="https://www.youtube.com/embed/dl1IkOkPblw? 에서 embed뒤에 값이 videoId 임 !       
-        videoId: '<?php echo $list[$i]['wr_subject']; ?>', // 최초 재생할 유튜브 영상 ID
-        playerVars: {
-          autoplay: true, //자동 재생 유무
-          loop: true, // 반복 재생 유무
-          playlist: '<?php echo $list[$i]['wr_subject']; ?>' // 반복재생할 영상 ID 목록
-        },
-        events: {
-          onReady: function (event) {
-            event.target.mute() // 음소거
-          }
-        }
-      });
-    }
-  </script>
             
         </div>
 

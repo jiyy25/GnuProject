@@ -1,5 +1,5 @@
 
-<nav class="navbar fixed-top navbar-expand-lg jjy_nav_bg px-0 px-lg-2">
+<nav id="jjy_nav" class="navbar fixed-top navbar-expand-lg jjy_nav_bg px-0 px-lg-2">
   <div class="container  justify-content-end justify-content-lg-center">
 
 	<h1 class="position-absolute jjy_h1 my-lg-0 px-lg-5">
@@ -8,7 +8,7 @@
 		</span>
 	</h1>
 
-	<button class="navbar-toggler navbar-dark navbar-toggler-right jjy_toggle" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+	<button id="hambtn" class="navbar-toggler navbar-dark navbar-toggler-right jjy_toggle" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 	  <span class="navbar-toggler-icon"></span>
 	</button>
 

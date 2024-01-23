@@ -145,9 +145,9 @@ include_once(G5_THEME_PATH.'/head.php');
 				<button class="">문의하기</button>
 				
 			</div>
-			<div class ="text-center align-items-center d-flex flex-column flex-lg-row ">
-				<label for="agree">
-					개인정보 처리방침 동의
+			<div class ="text-center align-items-center d-flex flex-column flex-lg-row agreeBox ml-1">
+				<label for="agree2">
+					<p>개인정보 처리방침 동의</p>
 					<input type="checkbox" id="agree" class="agree text-center">
 				</label>
 				

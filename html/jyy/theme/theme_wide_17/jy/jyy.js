@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', function () {
         scrollPosition = window.pageYOffset
         console.log(scrollPosition)
+
         if (scrollPosition === 0) {
             headBg.classList.remove('actbg')
             fdform.classList.add('none')
@@ -26,7 +27,21 @@ document.addEventListener('DOMContentLoaded', function () {
             headBg.classList.add('actbg')
         }
         fdform.classList.remove('click')
+        headBg.querySelector('#navbarResponsive').classList.remove('show')
     })
+
+    //반응형 헤더 스크롤
+    var hamBtn = document.getElementById("hambtn");
+    var jjyNav = document.getElementById("jjy_nav");
+
+    hamBtn.addEventListener("click", function () {
+        if (jjyNav.classList.contains("ham-on")) {
+            jjyNav.classList.remove("ham-on");
+        } else {
+            jjyNav.classList.add("ham-on");
+        }
+    });
+
 
     //폼태그 토글
     fdform.addEventListener('click', function () {
