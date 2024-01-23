@@ -21,6 +21,10 @@ $nanumfont: 'NanumSquareNeo-Variable';
 $cafefont: 'Cafe24Ssurround';
 
 
+
+
+
+
 //서브페이지 게시판 공통css
 
 #bo_list,
@@ -117,6 +121,38 @@ nav {
     .jjy_toggle {
         background-color: transparent !important;
     }
+
+
+    @media (max-width:990px) {
+        .navbar {
+
+
+            .navbar-collapse {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 100%;
+            }
+
+            .navbar-collapse:not(.show) {
+
+
+                overflow: hidden;
+                height: 0;
+                display: block !important;
+
+            }
+
+            .navbar-collapse.show {
+                overflow: visible;
+            }
+
+
+        }
+
+
+    }
+
 
     .navbar-nav {
 
@@ -451,6 +487,7 @@ nav {
     z-index: 99999;
     // display: block;
 
+
     &.on {
         position: relative;
         bottom: auto;
@@ -490,10 +527,11 @@ nav {
         border-radius: 20px;
     }
 
-    label{
+    label {
         margin: 0;
     }
-     input.agree {
+
+    input.agree {
         width: 15px;
         text-align: center;
         height: unset;
@@ -513,12 +551,16 @@ nav {
     }
 
     @media (max-width: 988px) {
+        &.click {
+
+            .jjy_form {
+                display: block !important;
+
+            }
+        }
+
         .jjy_form {
             display: none !important;
-
-            &.click {
-                display: block !important;
-            }
 
         }
 

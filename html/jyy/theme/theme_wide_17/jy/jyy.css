@@ -77,6 +77,22 @@ nav .jjy_toggle {
   background-color: transparent !important;
 }
 @media (max-width: 990px) {
+  nav .navbar .navbar-collapse {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+  }
+  nav .navbar .navbar-collapse:not(.show) {
+    overflow: hidden;
+    height: 0;
+    display: block !important;
+  }
+  nav .navbar .navbar-collapse.show {
+    overflow: visible;
+  }
+}
+@media (max-width: 990px) {
   nav .navbar-nav {
     position: absolute;
     left: 0;
@@ -358,11 +374,11 @@ nav .navbar-nav .jjy_ul_dropd .jjy_dropli a:hover {
   background-color: #103266;
 }
 @media (max-width: 988px) {
+  .jjy_storeform.click .jjy_form {
+    display: block !important;
+  }
   .jjy_storeform .jjy_form {
     display: none !important;
-  }
-  .jjy_storeform .jjy_form.click {
-    display: block !important;
   }
 }
 

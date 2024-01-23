@@ -25,13 +25,12 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             headBg.classList.add('actbg')
         }
+        fdform.classList.remove('click')
     })
 
     //폼태그 토글
-    document.querySelector('.jjy_storeform').addEventListener('click', function () {
-        document.querySelectorAll('.jjy_storeform .jjy_form').forEach(function (v, i) {
-            v.classList.toggle('click')
-        })
+    fdform.addEventListener('click', function () {
+        this.classList.toggle('click')
     })
 
 })
