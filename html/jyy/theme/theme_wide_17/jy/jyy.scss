@@ -63,8 +63,6 @@ $cafefont: 'Cafe24Ssurround';
 
 }
 
-
-
 //서브페이지 게시판 공통css
 
 #bo_list,
@@ -97,7 +95,7 @@ $cafefont: 'Cafe24Ssurround';
 .jjy_nav_bg {
 
     .megamenu-li {
-        padding: 7px 5px;
+        padding: 5px 20px;
     }
 
     background-color: transparent;
@@ -233,14 +231,15 @@ nav {
 
 
             .jjy_dropli {
-                margin: 0 5px;
+                margin: 0 22px;
+                text-align: center;
 
                 &:nth-child(1) {
                     margin-top: 0.5rem;
                 }
 
 
-                padding: 7px 5px;
+                padding: 10px 5px;
                 // margin-left: 1.8rem;
                 margin-right: 1rem;
 
@@ -276,6 +275,75 @@ nav {
 
 }
 
+//스와이퍼
+.jjySwiper {
+    position: relative;
+
+
+    .btnBox {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        z-index: 99999;
+
+
+        .swiperPB,
+        .swiperNB {
+            height: auto;
+            width: auto;
+            margin: 0;
+            padding: 4px 8px;
+            z-index: 99999;
+            border: 0;
+            background-color: transparent;
+            transform: translateY(-50%);
+            color: white;
+
+        }
+
+        .swiperNB::after {
+            content: '';
+            width: 40px;
+            height: 40px;
+            border: 2px solid white;
+            border-right: 0;
+            border-bottom: 0;
+            transform: rotate(135deg);
+        }
+
+        .swiperPB::after {
+            content: '';
+            width: 40px;
+            height: 40px;
+            border: 2px solid white;
+            border-right: 0;
+            border-bottom: 0;
+            transform: rotate(-45deg);
+        }
+
+    }
+
+    .swiper-pagination {
+        line-height: 3;
+        .dot {
+            font-size: 0;
+            width: 13px;
+            height: 13px;
+            background-color: transparent;
+            border: 2px solid white;
+            opacity: 0.5;
+        }
+
+        .dot.swiper-pagination-bullet-active {
+            width: 18px;
+            border-radius: 7px;
+            transition: .7s;
+            opacity: 1;
+        }
+    }
+
+
+}
 
 
 //고객이 인정한 맛, 회사소개
@@ -604,7 +672,7 @@ nav {
     }
 
     @media (min-width:991px) {
-        .jjy_storeform{
+        .jjy_storeform {
             min-height: 78px;
         }
 
@@ -719,5 +787,11 @@ footer {
     .logo1 {
         display: none;
 
+    }
+}
+
+#login_fs {
+    legend {
+        font-size: 0;
     }
 }

@@ -15,8 +15,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<div class="swiper <?php echo $bo_table; ?> " >
-   
+<div class="swiper <?php echo $bo_table; ?> jjySwiper" >
     <div class="swiper-wrapper">
     <?php
     for ($i=0; $i<$list_count; $i++) {
@@ -46,10 +45,12 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     게시물이 없습니다.
     <?php }  ?>
     </div>
-     <div class="swiper-pagination"></div>
-     <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-    
+     <div class="swiper-pagination "></div>
+     <div class="btnBox">
+        <div class="swiper-button-prev swiperPB"></div>
+        <div class="swiper-button-next swiperNB"></div>
+     </div>
+     
 </div>
 <script>
 const swiper = new Swiper('.swiper.<?php echo $bo_table; ?>', {
@@ -61,10 +62,13 @@ const swiper = new Swiper('.swiper.<?php echo $bo_table; ?>', {
   loop: true, 
   pagination: {
     el: '.swiper.<?php echo $bo_table; ?> .swiper-pagination',
+    renderBullet: function (index, className) {
+          return `<span class=" ${className} dot "> ${(index + 1)}</span>`;
+        },
   }, 
   navigation: {
-    nextEl: '.swiper.<?php echo $bo_table; ?> .swiper-button-next',
-    prevEl: '.swiper.<?php echo $bo_table; ?> .swiper-button-prev',
+    nextEl: '.swiper.<?php echo $bo_table; ?> .swiper-button-next ',
+    prevEl: '.swiper.<?php echo $bo_table; ?> .swiper-button-prev ',
   }
 });
 </script>

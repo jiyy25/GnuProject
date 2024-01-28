@@ -61,7 +61,7 @@
   transition: 0.3s;
 }
 .jjy_nav_bg .megamenu-li {
-  padding: 7px 5px;
+  padding: 5px 20px;
 }
 .jjy_nav_bg.actbg {
   background-color: #143E7F !important;
@@ -146,8 +146,9 @@ nav .navbar-nav .jjy_ul_dropd {
   min-width: 90px !important;
 }
 nav .navbar-nav .jjy_ul_dropd .jjy_dropli {
-  margin: 0 5px;
-  padding: 7px 5px;
+  margin: 0 22px;
+  text-align: center;
+  padding: 10px 5px;
   margin-right: 1rem;
 }
 nav .navbar-nav .jjy_ul_dropd .jjy_dropli:nth-child(1) {
@@ -174,6 +175,63 @@ nav .navbar-nav .jjy_ul_dropd .jjy_dropli a:hover {
     transition: 0.5s;
     background-color: transparent !important;
   }
+}
+
+.jjySwiper {
+  position: relative;
+}
+.jjySwiper .btnBox {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  z-index: 99999;
+}
+.jjySwiper .btnBox .swiperPB,
+.jjySwiper .btnBox .swiperNB {
+  height: auto;
+  width: auto;
+  margin: 0;
+  padding: 4px 8px;
+  z-index: 99999;
+  border: 0;
+  background-color: transparent;
+  transform: translateY(-50%);
+  color: white;
+}
+.jjySwiper .btnBox .swiperNB::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-right: 0;
+  border-bottom: 0;
+  transform: rotate(135deg);
+}
+.jjySwiper .btnBox .swiperPB::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-right: 0;
+  border-bottom: 0;
+  transform: rotate(-45deg);
+}
+.jjySwiper .swiper-pagination {
+  line-height: 3;
+}
+.jjySwiper .swiper-pagination .dot {
+  font-size: 0;
+  width: 13px;
+  height: 13px;
+  background-color: transparent;
+  border: 2px solid white;
+  opacity: 0.5;
+}
+.jjySwiper .swiper-pagination .dot.swiper-pagination-bullet-active {
+  width: 18px;
+  border-radius: 7px;
+  transition: 0.7s;
+  opacity: 1;
 }
 
 .jjy_company h2 {
@@ -491,4 +549,8 @@ footer p {
 }
 #jjy_nav.ham-on .logo1 {
   display: none;
+}
+
+#login_fs legend {
+  font-size: 0;
 }

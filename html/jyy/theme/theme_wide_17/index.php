@@ -10,6 +10,7 @@ include_once(G5_THEME_PATH.'/head.php');
 
 
 <!-------------------------- bo_table :  mainSwiper  -------------------------->
+
 <?php echo latest('pic_swiper','mainswiper',5,100); ?>
 
 
