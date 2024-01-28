@@ -293,13 +293,25 @@ nav .navbar-nav .jjy_ul_dropd .jjy_dropli a:hover {
 .jjy_best_menu h2 {
   font-family: "Cafe24Ssurround" !important;
 }
-.jjy_best_menu .bst_pic_lt h3 {
+.jjy_best_menu .bst_pic_lt .titleul {
+  margin-left: 1.1rem !important;
+}
+.jjy_best_menu .bst_pic_lt .titleul h3 {
   font-family: "NanumSquareNeo-Variable" !important;
+  background-color: #143E7F;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  color: #fff;
+  padding: 1rem 1rem 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0;
 }
 .jjy_best_menu .bst_pic_lt .bst_9menu {
-  height: 600px;
   background-color: #143E7F;
   border-radius: 20px;
+}
+.jjy_best_menu .bst_pic_lt .bst_9menu .bst_itemli {
+  width: auto;
 }
 .jjy_best_menu .bst_pic_lt .bst_9menu a {
   color: #fff;

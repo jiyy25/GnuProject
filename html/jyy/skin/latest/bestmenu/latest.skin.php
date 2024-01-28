@@ -10,7 +10,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
 		<h2 class=""><?php echo $bo_subject ?></h2>
 	</div>
 <div class="bst_pic_lt">
-    <ul class="d-flex">
+    <ul class="d-flex m-0 titleul">
         <li>
         <h3 class="lat_title">추천메뉴</h3>
         </li>
@@ -20,7 +20,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     </ul>
     
 
-    <div class="bst_9menu d-flex align-items-center p-3">
+    <div class="bst_9menu d-lg-flex align-items-center justify-content-center p-3">
     <?php
     $thumb = get_list_thumbnail($bo_table, $list[0]['wr_id'], $thumb_width, $thumb_height, false, true);
 
@@ -33,7 +33,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" >';
     $wr_href = get_pretty_url($bo_table, $list[0]['wr_id']);
     ?>
-        <div class="bst_big">
+        <div class="bst_big d-flex justify-content-center flex-column align-items-center">
             <a href="<?php echo $wr_href; ?>" class="bst_lt_img"><?php echo run_replace('thumb_image_tag', $img_content, $thumb); ?></a>
             <?php
             echo "<a href=\"".$wr_href."\"> ";
@@ -47,7 +47,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
         </div>
 
 
-        <div class="bst_small row">
+        <div class="bst_small row align-items-center text-center justify-content-center">
     <?php
     for ($i=1; $i<$list_count; $i++) {
     $thumb = get_list_thumbnail($bo_table, $list[$i]['wr_id'], $thumb_width, $thumb_height, false, true);
@@ -61,7 +61,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" >';
     $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
     ?>
-        <div class="bst_itemli col-3 align-items-center text-center">
+        <div class="bst_itemli col-lg-3">
             <a href="<?php echo $wr_href; ?>" class="bst_lt_img"><?php echo run_replace('thumb_image_tag', $img_content, $thumb); ?></a>
             <?php
 
