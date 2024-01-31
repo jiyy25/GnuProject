@@ -297,15 +297,20 @@ nav .navbar-nav .jjy_ul_dropd .jjy_dropli a:hover {
 .jjy_best_menu .bst_pic_lt .titleul {
   margin-left: 1.1rem !important;
 }
-.jjy_best_menu .bst_pic_lt .titleul h3 {
+.jjy_best_menu .bst_pic_lt .titleul .lat_title {
   font-family: "NanumSquareNeo-Variable" !important;
-  background-color: #143E7F;
+  background-color: #B3E8FB;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  color: #fff;
+  color: #000;
   padding: 1rem 1rem 0.5rem;
   margin-right: 0.5rem;
   margin-bottom: 0;
+  cursor: pointer;
+}
+.jjy_best_menu .bst_pic_lt .titleul .lat_title.bgclick {
+  background-color: #143E7F !important;
+  color: #fff !important;
 }
 .jjy_best_menu .bst_pic_lt .bst_9menu {
   padding: 1rem;
@@ -317,13 +322,14 @@ nav .navbar-nav .jjy_ul_dropd .jjy_dropli a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0.5rem 0;
 }
 .jjy_best_menu .bst_pic_lt .bst_9menu .bst_itemli .bst_lt_img {
   border-radius: 50%;
   background-color: #103266;
 }
 .jjy_best_menu .bst_pic_lt .bst_9menu .bst_itemli:hover a {
-  color: orangered;
+  color: #B3E8FB;
 }
 .jjy_best_menu .bst_pic_lt .bst_9menu .bst_itemli:hover img {
   transition: 0.5s;

@@ -46,7 +46,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     <?php }  ?>
     </div>
      <div class="swiper-pagination "></div>
-     <div class="btnBox">
+     <div class="btnBox d-lg-block d-none">
         <div class="swiper-button-prev swiperPB"></div>
         <div class="swiper-button-next swiperNB"></div>
      </div>
