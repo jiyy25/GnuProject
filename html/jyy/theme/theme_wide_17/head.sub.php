@@ -35,6 +35,8 @@ header("Pragma: no-cache"); // HTTP/1.0
 <html lang="ko">
 <head>
 <meta charset="utf-8">
+<link rel="icon" href="<?php echo G5_THEME_URL?>/jy/img/favicon.ico">
+
 <?php
 
     echo '<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">'.PHP_EOL;

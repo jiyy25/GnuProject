@@ -31,7 +31,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     $img_content = '<img src="'.$img.'" class="img-fluid" alt="'.$thumb['alt'].'" >';
     $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
     ?>
-        <div  class="swiper-slide">
+        <div  class="swiper-slide d-flex justify-content-center">
           
             <?php           
             echo "<a href=\"".$wr_href."\"> ";          
