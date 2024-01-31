@@ -129,27 +129,27 @@ include_once(G5_THEME_PATH.'/head.php');
 		<form action="" class="jjy_form d-flex flex-column flex-lg-row m-1">
 			<div class="formbox d-flex flex-column flex-sm-row justify-content-between align-items-center">
 				<div class="form1 mr-sm-2 mb-1 mb-lg-0">
-					<input type="text" placeholder="이름" class="border">
+					<input id="name" type="text" placeholder="이름" class="border" required>
 				</div>
 				<div class="form2 mr-sm-2 mb-1 mb-lg-0">
-					<input type="text" placeholder="전화번호" class="border">
+					<input id="phoneNumber" type="text" placeholder="전화번호" class="border" required>
 				</div>
 			</div>
 			<div class="d-flex flex-column flex-sm-row align-items-center ">
-				<select name="user_area" id="user_area" class="border  mr-sm-2 mb-2 mb-md-0">
+				<select name="user_area" id="user_area" class="border  mr-sm-2 mb-2 mb-md-0"  required>
 					<option value="">가맹희망지역</option>
-					<option value="">서울</option>
-					<option value="">대전</option>
-					<option value="">대구</option>
-					<option value="">부산</option>
+					<option value="서울">서울</option>
+					<option value="대전">대전</option>
+					<option value="대구">대구</option>
+					<option value="부산">부산</option>
 				</select>
-				<button class="">문의하기</button>
+				<button type="button" onclick="submitForm()">문의하기</button>
 				
 			</div>
 			<div class ="text-center align-items-center d-flex flex-column flex-lg-row agreeBox ml-1">
 				<label for="agree2">
 					<p>개인정보 처리방침 동의</p>
-					<input type="checkbox" id="agree" class="agree text-center">
+					<input type="checkbox" id="agree" class="agree text-center" required>
 				</label>
 				
 			</div>
@@ -157,6 +157,26 @@ include_once(G5_THEME_PATH.'/head.php');
 			
 		</form>
 	</div>
+	<script>
+		  function submitForm() {
+            var name = document.getElementById("name").value;
+            var phoneNumber = document.getElementById("phoneNumber").value;
+            var userArea = document.getElementById("user_area").value;
+	// 	console.log("Name:", name);
+   	//  console.log("Phone Number:", phoneNumber);
+    // 	console.log("User Area:", userArea);
+
+            if (document.getElementById("agree").checked) {
+                if (name && phoneNumber && userArea) {
+                    alert("접수되었습니다");
+                } else {
+                    alert("⚠️ 모든 필수 입력 필드를 채워주세요. ⚠️");
+                }
+            } else {
+                alert("⚠️ 개인정보수집 이용 동의 체크해주세요. ⚠️");
+            }
+        }
+	</script>
 </div>
 
 <?php

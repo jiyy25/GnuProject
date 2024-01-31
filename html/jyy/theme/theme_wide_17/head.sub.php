@@ -35,8 +35,23 @@ header("Pragma: no-cache"); // HTTP/1.0
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<link rel="icon" href="<?php echo G5_THEME_URL?>/jy/img/favicon.ico">
-
+<link rel="icon" href="https://www.coffeehole.co.kr/images/favicon.ico">
+ <!-- SEO -->
+  <!-- 기본설명-->
+  <meta name="description" content="커피와 디저트가 맛있는 카페, 커피홀" />
+  <!-- 로봇 -->
+  <meta name="robots" content="index,follow"/>
+  <!-- 공유시 보여줄정보 -->
+  <meta property="og:site_name" content="커피홀" />
+  <meta property="og:url" content=""/>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="커피홀" />
+  <meta property="og:description" content="커피, 디저트, 베이커리 카페 프랜차이즈, 창업 안내, 브랜드 가맹 및 창업 상담, 전국 매장 안내" />
+  <meta property="og:image" content="https://www.coffeehole.co.kr/images/main/logo_on.png" />
+  <!-- 모바일 바로가기 이미지 -->
+  <link rel="shortcut icon" type="image/x-icon" href="https://www.coffeehole.co.kr/images/main/logo_on.png" />
+  <link rel="apple-touch-icon" href="https://www.coffeehole.co.kr/images/main/logo_on.png" />
+  <link rel="apple-touch-icon-precomposed" href="https://www.coffeehole.co.kr/images/main/logo_on.png">
 <?php
 
     echo '<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">'.PHP_EOL;

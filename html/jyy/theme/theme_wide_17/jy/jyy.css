@@ -10,6 +10,14 @@
   font-weight: normal;
   font-style: normal;
 }
+.subpage > p > img {
+  width: 100vw;
+}
+
+body.subpage {
+  overflow-x: hidden;
+}
+
 @media (max-width: 990px) {
   .navbar .navbar-collapse {
     position: absolute;
@@ -371,6 +379,7 @@ nav .navbar-nav .jjy_ul_dropd .jjy_dropli a:hover {
   font-family: "NanumSquareNeo-Variable";
   background-color: rgba(179, 232, 251, 0.8431372549);
   border-radius: 10px;
+  height: 100% !important;
 }
 .jjy_mv .mv_all .mv_texbox h2 {
   font-size: 25px;
