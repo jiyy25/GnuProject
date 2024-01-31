@@ -112,6 +112,7 @@ if(!defined('G5_IS_ADMIN'))
 <!-- Custom  -->
 <link href="<?php echo G5_THEME_URL?>/css/modern-business.css" rel="stylesheet">
 <link href="<?php echo G5_THEME_URL?>/css/ety.css" rel="stylesheet">
+<link href="<?php echo G5_THEME_URL?>/jy/subjy.css" rel="stylesheet">
 <link href="<?php echo G5_THEME_URL?>/jy/jyy.css" rel="stylesheet">
 
 

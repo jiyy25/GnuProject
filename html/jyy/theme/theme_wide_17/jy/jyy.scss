@@ -381,6 +381,7 @@ nav {
             font-family: $nanumfont;
 
             strong {
+                font-family: $cafefont;
                 font-size: 25px;
             }
 
@@ -451,18 +452,46 @@ nav {
 
         .bst_9menu {
             // height: 600px;
+            padding: 1rem;
             background-color: $maincolor;
             border-radius: 20px;
 
             .bst_itemli {
                 width: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .bst_lt_img {
+                    border-radius: 50%;
+                    background-color: $darkblue;
+                }
+
+
+
+                &:hover {
+                    a {
+                        color: orangered;
+                    }
+
+                    img {
+                        transition: 0.5s;
+
+                        &:hover {
+                            filter: drop-shadow(5px 7px 10px #091d3a);
+                        }
+                    }
+                }
+
             }
 
             a {
+                font-size: 20px;
                 color: $whitecolor;
+                border-radius: 50%;
 
-                &:hover {
-                    color: $skyblue;
+                &:hover+a>img {
+                    filter: drop-shadow(5px 7px 10px #091d3a);
                 }
             }
 
@@ -482,10 +511,8 @@ nav {
 
             .bst_lt_img {
                 display: block;
-                background-color: $darkblue;
-                border-radius: 50%;
                 max-width: 177px;
-                transition: 0.5s;
+                transition: 0.6s;
 
                 &:hover {
                     background-color: $skyblue;
@@ -494,6 +521,7 @@ nav {
 
         }
     }
+
 
 }
 
@@ -511,11 +539,16 @@ nav {
             background-color: #b3e8fbd7;
             border-radius: 10px;
 
-            p {
+            h2 {
                 font-size: 25px;
                 text-align: center;
+            }
+
+            p {
+                font-size: 18px;
+                text-align: center;
                 margin-bottom: 0;
-                line-height: 2.5rem;
+                line-height: 1.5rem;
             }
 
             .mv_btn {
@@ -578,13 +611,29 @@ nav {
 
         }
     }
+
+    .lt_more {
+        border-radius: 18px;
+        background-color: $maincolor;
+        color: $whitecolor;
+        padding: 0.5rem;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        width: 80px;
+        transition: 0.5s;
+
+        &:hover {
+            background-color: $skyblue;
+            color: $maincolor;
+        }
+    }
 }
 
 
 //가맹문의 폼 존
 
 .jjy_storeform {
-    padding: 0.5rem 2rem;
     background-color: $skyblue;
     position: fixed;
     bottom: 0;

@@ -1,0 +1,111 @@
+#sub_content {padding: 60px 0 200px}
+.sub_inner {max-width: 1300px; width: 100%; margin: 0 auto;}
+.sub_wrap {margin-top: 90px;}
+
+.sub_vis_txt {position: absolute; top: 50%; left: 0;RIGHT:0;transform:translatey(-50%);  padding-top: 100px;}
+.sub_vis_inner {text-align: center;}
+.sub_vis_txt h2 { font-family: 'GmarketSansBold'; color: #191919; font-size: 48px; line-height: 1; letter-spacing: -0.05em;}
+.sub_vis_txt h3 {color: #191919; font-size: 18px; line-height: 1; letter-spacing: -0.025em; margin-top: 15px;}
+.sub_menu {display: none;}
+
+
+/* .sub_vis_txt {position: absolute; top: 0; left: 0; width: 100%; height: calc(100% - 100px); display: flex; align-items: center; justify-content: center; margin-top: 100px;}
+.sub_vis_inner {text-align: center;}
+.sub_vis_txt h2 { font-family: 'GmarketSansBold'; color: #191919; font-size: 48px; line-height: 1; letter-spacing: -0.05em;}
+.sub_vis_txt h3 {color: #191919; font-size: 18px; line-height: 1; letter-spacing: -0.025em; margin-top: 15px;}
+.sub_menu {display: none;} */
+
+.co_brand_wrap {position: relative;}
+.co_brand_cir {position: absolute; top: -50px; right: -75px; animation: spin infinite linear 30s;}
+.co_brand_cir img {width: 512px;}
+.cco_brand_inner {width: 1300px; margin: 0 auto;}
+.co_brand_tp {text-align: center;}
+.co_brand_tp_title {font-family: 'GmarketSansBold'; color: #191919; font-size: 40px; line-height: 1; letter-spacing: -0.025em;}
+.co_brand_tp_title2 {color: #191919; font-size: 30px; line-height: 1; margin-top: 50px; letter-spacing: -0.05em;}
+.co_brand_tp_title2 strong {color: #005ad5;}
+.co_brand_menu1 {text-align: center; width: 1120px; margin: 180px auto 0;}
+.co_brand_menu1_title {color: #191919; font-size: 40px; line-height: 1; font-weight: 500; letter-spacing: -0.05em;}
+.co_brand_menu1_title strong {font-family: 'GmarketSansBold';}
+.co_brand_inner {display: flex; gap: 0 20px; margin-top: 94px;}
+.co_brand_inner > div {width: 50%;}
+.co_brand_mu1 h4 {font-family: 'GmarketSansBold'; color: #191919; font-size: 30px; line-height: 1; letter-spacing: -0.025em;}
+.co_brand_mu1 .img_wrap {margin-top: 50px;}
+.co_brand_menu1_img {margin-top: 20px;}
+.co_brand_menu2 {text-align: center; margin: 85px auto 0; width: 1110px;}
+.co_brand_menu2_title {font-family: 'GmarketSansBold'; color: #191919; font-size: 30px; letter-spacing: -0.025em; line-height: 1;}
+.co_brand_menu2_inner {display: flex; margin-top: 40px; margin-left: 20px;}
+.co_brand_mu2 {position: relative; display: flex; align-items: center; justify-content: center; height: 150px;width: 50%; border-radius: 100px;}
+.co_brand_mu2.blue_bg {background: #023d7d; z-index: 5; }
+.co_brand_mu2.yellow_bg {margin-left: -25px; background: #ffd700;}
+.co_brand_mu2_txt em {display: block; color: #fff; font-size: 18px; line-height: 1; letter-spacing: -0.025em;}
+.co_brand_mu2_txt strong {display: block; color: #fff; font-size: 20px; line-height: 1; font-family: 'GmarketSansBold'; letter-spacing: -0.025em; margin-top: 17px;}
+.co_brand_mu2.yellow_bg .co_brand_mu2_txt em {color: #191919;}
+.co_brand_mu2.yellow_bg .co_brand_mu2_txt strong {color: #191919;}
+
+.co_brand_menu3 {text-align: center; width: 1120px; margin: 180px auto 0;}
+.co_brand_menu3_inner {display: flex; margin-top: 90px; margin-left: 20px;}
+.co_brand_menu3_inner > div {widtH: 50%;}
+.co_brand_menu3_inner > div.cco_bbrand_txt_mmm {margin-left: -25px;}
+.co_brand_mu3 {position: relative; display: flex; align-items: center; justify-content: center; height: 150px; width: 100%; border-radius: 100px; }
+.co_brand_mu3.brand_bg1 {background: url("https://www.coffeehole.co.kr/images/sub/co_brand_bg1.png") center no-repeat; background-size: cover; z-index: 5; }
+.co_brand_mu3.brand_bg2 { background: url("https://www.coffeehole.co.kr/images/sub/co_brand_bg2.png") center no-repeat; background-size: cover;}
+.co_brand_mu3_txt em {display: block; color: #fff; font-size: 18px; line-height: 1; letter-spacing: -0.025em;}
+.co_brand_mu3_txt strong {display: block; color: #fff; font-size: 20px; line-height: 1; font-family: 'GmarketSansBold'; letter-spacing: -0.025em;; margin-top: 17px;}
+.cco_bbrand_txt {color: #505050; font-size: 20px; line-height: 1.45; margin-top: 40px; letter-spacing: -0.05em}
+
+
+
+.brand_wrap {position: relative;}
+.brand_inner {width: 1300px; margin: 0 auto;}
+.brand_tp_txt {position: relative; color: #191919; font-size: 40px; line-height: 1; text-align: center; padding: 4px 0 0; letter-spacing: -0.05em;}
+.brand_tp_txt strong {font-family: 'GmarketSansBold';}
+.brand_tp_txt:before {content: ""; position: absolute; left: 50%; transform: translateX(-50%); bottom: -65px; width: 929px; height: 86px; background: url("https://www.coffeehole.co.kr/images/sub/brand_tp_txt1.png") center no-repeat; background-size: 100%;}
+.brand_md_menu {margin-top: 135px; padding: 0 0 220px;}
+.brand_md_menu ul {position: relative;}
+.brand_md_menu ul:after {content: ""; display: block; clear: both;}
+.brand_md_menu ul li {float: left; width: 33.33%; text-align: center;}
+.brand_md_cir {width: 300px; height: 300px; border: 1px solid #e1e1e1; display: flex; justify-content: center; margin: 0 auto; border-radius: 50%; flex-wrap: wrap;}
+.brand_md_ic1 {position: relative; width: 68px; height: 67px;  margin: 65px auto 0; /* background: url("/images/sub/brand_tp_ic1.png") center no-repeat; background-size: 100%; */}
+.brand_md_ic2 {position: relative; width: 67px; height: 68px; margin: 65px auto 0; /* background: url("/images/sub/brand_tp_ic2.png") center no-repeat; background-size: 100%; */}
+.brand_md_ic3 {position: relative;  width: 69px; height: 69px; margin: 65px auto 0; /* background: url("/images/sub/brand_tp_ic3.png") center no-repeat; background-size: 100%; */}
+
+ .brand_md_ic img {position: absolute; top: 50%; left: 50%; transform: translate(-50% , -50%);}
+.brand_md_menu ul li.aos-animate .brand_md_ic img.brand_tpp_img {animation: opp1 4s 1 forwards; opacity :1;}
+.brand_md_menu ul li.aos-animate .brand_md_ic img.brand_tpp_img_on {animation: opp2 4s 1 forwards; opacity :0;}
+
+@keyframes opp1 {
+	0% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+@keyframes opp2 {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+.brand_md_cir_txt {width: 100%; margin-top: -20px;}
+.brand_md_cir_txt dt {font-family: 'GmarketSansBold';  color: #191919; font-size: 25px; line-height: 1; letter-spacing: -0.05em;}
+.brand_md_cir_txt dd {font-family: 'GmarketSansBold'; color: #191919; font-size: 20px; line-height: 1; margin-top: 10px; letter-spacing: -0.025em;}
+
+/* .brand_md_cir:hover .brand_md_ic1 {background: url("/images/sub/brand_tp_ic1_on.png") center no-repeat; background-size: 100%;}
+.brand_md_cir:hover .brand_md_ic2 {background: url("/images/sub/brand_tp_ic2_on.png") center no-repeat; background-size: 100%;}
+.brand_md_cir:hover .brand_md_ic3 {background: url("/images/sub/brand_tp_ic3_on.png") center no-repeat; background-size: 100%;} */
+.brand_bt_txt {color: #505050; font-size: 20px; line-height: 1.45; letter-spacing: -0.05em; margin-top: 38px;}
+
+.ceo_greet_wrap {position: relative; padding: 0 0 195px; z-index: 1;}
+.ceo_greet_wrap:before {content: ""; positioN: absolute; top: 30px; left: 0; widtH: 100%; height: 100%; background: #f9f9f9; z-index: -1;}
+.ceo_greet_wrap:after {content: ""; position: absolute; bottom: 132px; right: -135px; width: 512px; height: 511px; background: url("https://www.coffeehole.co.kr/images/sub/ceo_coffee_cir_img1.png") center no-repeat; background-size: 100%; animation: spin infinite linear 30s; z-index: -1;}
+@keyframes spin {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+
+.ceo_greet_inner {width: 1300px; margin: 0 auto;}
+.ceo_greet_title {font-family: 'GmarketSansBold'; color: #191919; font-size: 40px; line-height: 1; letter-spacing: -0.025em;}
+.ceo_greet_menu1 {margin-top: 97px; display: flex; justify-content: space-between;}
+.ceo_greet_mu1_lt h3 {color: #191919; font-size: 25px; line-height: 1; letter-spacing: -0.05em;}
+.ceo_greet_mu1_lt p {color: #505050; font-size: 20px; line-height: 1.54; margin-top: 37px; letter-spacing: -0.05em; word-break: keep-all;}
+.ceo_greet_menu2 {display: flex; margin-top: 80px; align-items: flex-end}
+.ceo_greet_menu2 span {font-family: 'GmarketSansBold'; color: #191919; font-size: 25px; line-height: 1; letter-spacing: -0.05em;}
+.ceo_greet_menu2 .ceo_greet_sign {width: 192px; height: 79px; background: url("https://www.coffeehole.co.kr/images/sub/ceo_sing_img2.png") center no-repeat; background-size: 100%; margin-left: 23px;}
+.ceo_greet_mu2_img {display: none;}

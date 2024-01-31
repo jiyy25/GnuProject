@@ -30,7 +30,7 @@ include_once(G5_THEME_PATH.'/head.php');
 <!-------------------------- 제품안내 갤러리 -------------------------->
 <div class="container margin-top-110 margin-bottom-110 jjy_bestmenu jjy_best_menu">
 	<!-- LATEST : bestmenu -->
-	<?php echo latest('bestmenu', 'bestmenu', 9, 24); ?>
+	<?php echo latest('bestmenu', 'bestmenu', 16, 24); ?>
 </div>
 
 
