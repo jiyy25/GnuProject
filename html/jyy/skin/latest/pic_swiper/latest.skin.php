@@ -3,9 +3,13 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 
 
-$thumb_width = 210;
+$thumb_width = 1920;
+$thumb_width2 = 768;
 $thumb_height = 150;
 $list_count = (is_array($list) && $list) ? count($list) : 0;
+
+$board_file_path = G5_DATA_PATH . '/file/' . $bo_table;
+$board_file_url = G5_DATA_URL . '/file/' . $bo_table;
 
 ?>
 <link
@@ -21,21 +25,31 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     for ($i=0; $i<$list_count; $i++) {
     $thumb = get_list_thumbnail($bo_table, $list[$i]['wr_id'], $thumb_width, $thumb_height, false, true);
 
-    if($thumb['src']) {
-					
-        $img = $thumb['ori'];
-    } else {
-        $img = G5_IMG_URL.'/no_img.png';
-        $thumb['alt'] = '이미지가 없습니다.';
-    }
-    $img_content = '<img src="'.$img.'" class="img-fluid" alt="'.$thumb['alt'].'" >';
-    $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
+    $list[$i]['file'] = get_file($bo_table, $list[$i]['wr_id']);
+
+    //두번쨰 첨부파일까지 출력
+    $thumb1_src = $board_file_url . "/" . thumbnail($list[$i]['file'][0]['file'], $board_file_path, $board_file_path, $thumb_width,'', false,true);
+    $thumb2_src = $board_file_url . "/" . thumbnail($list[$i]['file'][1]['file'], $board_file_path, $board_file_path, $thumb_width2,'', false,true);
+
+    // if($thumb['src']) {
+    //     $img = $thumb['ori'];
+    // } else {
+    //     $img = G5_IMG_URL.'/no_img.png';
+    //     $thumb['alt'] = '이미지가 없습니다.';
+    // }
+    // $img_content = '<img src="'.$img.'" class="img-fluid" alt="'.$thumb['alt'].'" >';
+    // $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
+    $wr_href = $list[$i]['wr_link1'];
     ?>
         <div  class="swiper-slide d-flex justify-content-center">
           
             <?php           
             echo "<a href=\"".$wr_href."\"> ";          
-            echo  $img_content; 
+            // echo  $img_content; 
+            echo   '<img src="'.$thumb1_src.'" class="img-fluid d-none d-lg-block" alt="'.$thumb['alt'].'" >';
+            echo   '<img src="'.$thumb2_src.'" class="img-fluid d-lg-none" alt="'.$thumb['alt'].'" >';
+           
+            
             echo "</a>";
             ?>
            
