@@ -10,14 +10,6 @@
   font-weight: normal;
   font-style: normal;
 }
-.subpage > p > img {
-  width: 100vw;
-}
-
-body.subpage {
-  overflow-x: hidden;
-}
-
 @media (max-width: 990px) {
   .navbar .navbar-collapse {
     position: absolute;
@@ -616,4 +608,52 @@ footer p {
 
 #login_fs legend {
   font-size: 0;
+}
+
+.boardTitleimg {
+  position: relative;
+}
+.boardTitleimg img {
+  width: 100vw;
+}
+.boardTitleimg .boardTitle {
+  font-family: "Cafe24Ssurround";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+}
+
+#container_title {
+  font-size: 32px;
+  font-family: "Cafe24Ssurround";
+}
+
+body.subpage {
+  overflow-x: hidden !important;
+}
+body.subpage #faq_hhtml img {
+  width: 100% !important;
+}
+body.subpage #faq_sch {
+  padding: 30px 0;
+}
+body.subpage #faq_himg {
+  background-size: 100%;
+  height: 432px;
+}
+body.subpage #faq_himg h2 {
+  font-family: "Cafe24Ssurround";
+}
+
+#mb_login {
+  min-height: calc(100vh - 227.4px - 66px - 16px);
+}
+
+.mbskin {
+  margin: 80px auto 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -132,10 +132,24 @@ if(!defined('G5_IS_ADMIN'))
 <link href="<?php echo G5_THEME_URL?>/jy/subjy.css" rel="stylesheet">
 <link href="<?php echo G5_THEME_URL?>/jy/jyy.css" rel="stylesheet">
 
+<?php
+if(!defined('G5_IS_ADMIN'))
+echo $config['cf_add_script'];
+
+if(!defined('_INDEX_')){
+$bodycls = "boardpage ".$bo_table;
+$bodycls =  isset($co_id) ? "contentpage ".$co_id  : " normalpage ";
+}else{
+$bodycls = "indexpage";
+ 
+}
+?>
+
 
 </head>
 <body
 class="
+<?php echo $bodycls; ?>
     <?php if( $bo_table ) echo  $bo_table." boardstyle"; ?> 
     <?php echo $co_id; ?>
     <?php if(defined('_INDEX_')) echo 'mainpage'; else echo 'subpage'; ?>

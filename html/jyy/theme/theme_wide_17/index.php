@@ -158,7 +158,7 @@ include_once(G5_THEME_PATH.'/head.php');
 		</form>
 	</div>
 	<script>
-		  function submitForm() {
+		function submitForm() {
             var name = document.getElementById("name").value;
             var phoneNumber = document.getElementById("phoneNumber").value;
             var userArea = document.getElementById("user_area").value;
