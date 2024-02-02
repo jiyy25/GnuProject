@@ -7,10 +7,10 @@
 [커피홀 개인프로젝트](http://jiyy25.dothome.co.kr/)
 
 # 라이브러리
-jQuery v3.3.1
-Bootstrap v4.6
-SWIPER 11.0.5
-sass: 1.69.5
+- jQuery v3.3.1
+- Bootstrap v4.6
+- SWIPER 11.0.5
+- sass: 1.69.5
 
 
 # 테마 커스터마이징 내역
