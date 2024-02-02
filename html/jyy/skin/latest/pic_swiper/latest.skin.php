@@ -46,8 +46,8 @@ $board_file_url = G5_DATA_URL . '/file/' . $bo_table;
             <?php           
             echo "<a href=\"".$wr_href."\"> ";          
             // echo  $img_content; 
-            echo   '<img src="'.$thumb1_src.'" class="img-fluid d-none d-lg-block" alt="'.$thumb['alt'].'" >';
-            echo   '<img src="'.$thumb2_src.'" class="img-fluid d-lg-none" alt="'.$thumb['alt'].'" >';
+            echo   '<img src="'.$thumb1_src.'" class="img-fluid d-none d-md-block" alt="'.$thumb['alt'].'" >';
+            echo   '<img src="'.$thumb2_src.'" class="img-fluid d-md-none" alt="'.$thumb['alt'].'" >';
            
             
             echo "</a>";
