@@ -119,6 +119,8 @@ include_once(G5_THEME_PATH.'/head.php');
 
 
 <!-- 가맹문의 폼태그 영역 -->
+<!-- 폼태그 -->
+
 
 <div class="jjy_storeform">
 	<div class="container d-flex flex-column flex-lg-row  justify-content-between align-items-center">
@@ -126,30 +128,45 @@ include_once(G5_THEME_PATH.'/head.php');
 			<strong class="text-center">가맹문의</strong>
 			<span class="text-center">1992-0825</span>
 		</div>
-		<form action="" class="jjy_form d-flex flex-column flex-lg-row m-1">
+		<form  name=frm method=post action="<?php echo G5_BBS_URL;?>/write_update.php" onsubmit="return checkFrm(this);" class="jjy_form d-flex flex-column flex-lg-row m-1">
+		<input type=hidden   name=w        value="">
+         <input type="hidden" name="token" value="<?php echo get_write_token('myform'); ?>"> 
+         <!-- myform 게시판명 -->
+        <input type=hidden name=bo_table value="myform">
+         <input type=hidden name=wr_id    value="">
+         <input type=hidden name=sca      value="">
+         <input type=hidden name=sfl      value="">
+         <input type=hidden name=stx      value="">
+         <input type=hidden name=spt      value="">
+         <input type=hidden name=sst      value="">
+         <input type=hidden name=sod      value="">
+
+         <input type=hidden name=wr_subject  value="빠른 상담 신청">
+        <input type=hidden name=wr_content  value="빠른 상담 신청">
+
 			<div class="formbox d-flex flex-column flex-sm-row justify-content-between align-items-center">
 				<div class="form1 mr-sm-2 mb-1 mb-lg-0">
-					<input id="name" type="text" placeholder="이름" class="border" required>
+					<input id="wr_name" name="wr_name" type="text" placeholder="이름" class="border" required>
 				</div>
 				<div class="form2 mr-sm-2 mb-1 mb-lg-0">
-					<input id="phoneNumber" type="text" placeholder="전화번호" class="border" required>
+					<input id="wr_2" type="text"name="wr_2" placeholder="전화번호" class="border" required>
 				</div>
 			</div>
 			<div class="d-flex flex-column flex-sm-row align-items-center ">
-				<select name="user_area" id="user_area" class="border  mr-sm-2 mb-2 mb-md-0"  required>
+				<select name="wr_3" id="user_area" class="border  mr-sm-2 mb-2 mb-md-0"  required>
 					<option value="">가맹희망지역</option>
 					<option value="서울">서울</option>
 					<option value="대전">대전</option>
 					<option value="대구">대구</option>
 					<option value="부산">부산</option>
 				</select>
-				<button type="button" onclick="submitForm()">문의하기</button>
+				<button type="submit">문의하기</button>
 				
 			</div>
 			<div class ="text-center align-items-center d-flex flex-column flex-lg-row agreeBox ml-1">
 				<label for="agree2">
 					<p>개인정보 처리방침 동의</p>
-					<input type="checkbox" id="agree" class="agree text-center" required>
+					<input type="checkbox" id="agree" name="wr_6" class="agree text-center" required>
 				</label>
 				
 			</div>
@@ -157,7 +174,7 @@ include_once(G5_THEME_PATH.'/head.php');
 			
 		</form>
 	</div>
-	<script>
+	<!-- <script>
 		function submitForm() {
             var name = document.getElementById("name").value;
             var phoneNumber = document.getElementById("phoneNumber").value;
@@ -176,7 +193,19 @@ include_once(G5_THEME_PATH.'/head.php');
                 alert("⚠️ 개인정보수집 이용 동의 체크해주세요. ⚠️");
             }
         }
-	</script>
+	</script> -->
+	   <script type="text/javascript">
+      
+      function checkFrm(obj) {
+         if(obj.wr_6.checked == false) {
+            alert('개인정보 활동동의에 체크해주세요.');
+            obj.wr_6.focus();
+            return false;
+         }
+      }
+
+
+</script>
 </div>
 
 <?php
